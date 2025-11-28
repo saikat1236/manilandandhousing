@@ -65,7 +65,7 @@ i.ri-download-2-fill.slide-down {
     width: 50px;
     height: 50px;
     border: 5px solid #00000042;
-    border-top-color: purple;
+    border-top-color: white;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -151,7 +151,7 @@ i.ri-download-2-fill.slide-down {
     font-weight: 400;
     position: relative;
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
 }
 
 .contact-btn {
@@ -170,8 +170,8 @@ i.ri-download-2-fill.slide-down {
 
 .download-brochure-link {
     color: #fff;
-    background-color: #e6b84e;
-    border: 2px solid #e6b84e;
+    background-color: #000000;
+    border: 2px solid #000000;
     display: inline-flex;
     align-items: center;
     border-radius: 5px;
@@ -196,7 +196,7 @@ i.ri-download-2-fill.slide-down {
     animation: slideDown 2s ease-out;
     display: inline-block;
     animation-iteration-count: infinite;
-    color: white;
+    color: black;
     margin-top: 8px;
 }
 
@@ -2229,7 +2229,7 @@ form>div:nth-child(6)>div:nth-child(1)>div>label {
     right: 0;
     z-index: 1000;
     transition: all 0.3s ease-out;
-    background-color: purple;
+    background-color: white;
 }
 
 #header.animated {
