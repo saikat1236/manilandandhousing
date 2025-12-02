@@ -684,7 +684,7 @@ header.sticky {
     content: "";
     left: 0;
     bottom: -8px;
-    width: 180px;
+    width: 100%;
     height: 2px;
     background: var(--primary-color);
 }
@@ -696,6 +696,7 @@ header.sticky {
 
 .overview-sleder {
     width: 48%;
+    text-align: center;
 }
 
 .overview-content {
@@ -1893,6 +1894,22 @@ button.carousel-control-next div {
     }
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+    color: var(--primary-color);
+}
+
 .faq-section {
     padding: 60px 0;
     background-color: #f8f8f8;
@@ -2007,7 +2024,7 @@ button {
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     transition: background-color 0.3s;
 }
 
