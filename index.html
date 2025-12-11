@@ -17,6 +17,41 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <script src='//forms.cdn.sell.do/t/64e8470c4443ae6d5f19f377.js'></script>
     <link rel="stylesheet" href="assets/CSS/style.css">
+    <style>
+        /* Responsive masterplan image: mobile = full width, desktop = constrained */
+        .masterplan-img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            /* object-fit: contain; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .masterplan-img {
+                width: 70%;
+                max-height: 1000px;
+            }
+        }
+        /* Responsive secondary image (pro.png): full width on mobile, narrower on desktop */
+        .pro-img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        @media (min-width: 768px) {
+            .pro-img {
+                width: 50%;
+                max-height: 450px;
+                margin: 10px;
+            }
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKTCXSE7PN"></script>
     <script>
@@ -366,12 +401,15 @@
             <div class="plan-body">
                 <section id="wrapper">
                     <div class="content">
-                        <div class="tabs" style="justify-content: center;">
+                        <div class="tabs w-1/2" style="justify-content: center;">
                             <button class="planTablinks tablinks active" data-country="master-plan">
                                 <p data-title="Master Plan">Schedule</p>
                             </button>
                             <button class="planTablinks tablinks" data-country="Unit-Plan">
-                                <p data-title="Unit Plan">Unit Plan</p>
+                                <p data-title="Unit Plan">Unit Plan 12A</p>
+                            </button>
+                            <button class="planTablinks tablinks" data-country="Unit-Plan2">
+                                <p data-title="Unit Plan2">Unit Plan 6</p>
                             </button>
                             <button class="planTablinks tablinks" data-country="map">
                                 <p data-title="Map">Map</p>
@@ -383,9 +421,8 @@
                                 <div class="swiper floor-plan">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="assets/mani/sc.png" alt="Masterplan">
+                                            <img src="assets/mani/sc.png" alt="Masterplan" class="masterplan-img">
                                         </div>
-                   
                                     </div>
                                 </div>
                             </div>
@@ -396,25 +433,45 @@
                                 <div class="swiper floor-plan">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="assets/mani/p12a.png" alt="Unit plan">
+                                            <img src="assets/mani/p12a.png" alt="Unit plan" class="masterplan-img">
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/mani/p12b.png" alt="Unit plan">
+                                            <img src="assets/mani/p12b.png" alt="Unit plan" class="masterplan-img">
                                         </div>
-                                        <div class="swiper-slide">
+                                        <!-- <div class="swiper-slide">
                                             <img src="assets/mani/p6a.png" alt="Unit plan">
                                         </div>
                                         <div class="swiper-slide">
                                             <img src="assets/mani/p6b.png" alt="Unit plan">
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                               <div id="Unit-Plan2" class="planTabcontent tabcontent">
+                                <div class="swiper floor-plan">
+                                    <div class="swiper-wrapper">
+                                        <!-- <div class="swiper-slide">
+                                            <img src="assets/mani/p12a.png" alt="Unit plan">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/mani/p12b.png" alt="Unit plan">
+                                        </div> -->
+                                        <div class="swiper-slide">
+                                            <img src="assets/mani/p6a.png" alt="Unit plan" class="masterplan-img">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/mani/p6b.png" alt="Unit plan" class="masterplan-img">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div id="map" class="planTabcontent tabcontent">
                                 <div class="swiper floor-plan">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="assets/mani/mplan.png" alt="Map">
+                                            <img src="assets/mani/mplan.png" alt="Map" class="masterplan-img">
                                         </div>
                                     </div>
                                 </div>
@@ -502,16 +559,16 @@
             <div class="location-heading">
                 <div class="section-heading">Project Location</div>
             </div>
-            <div class="location-body" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.794977087639!2d81.01607167543459!3d26.77236577673101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1765440407364!5m2!1sen!2sin" width="60%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<img src="assets/mani/pro.png" alt="" style="width: 30%; height: 450px; margin: 10px;">
+            <div class="location-body d-flex flex-column flex-md-row justify-content-between align-items-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.794977087639!2d81.01607167543459!3d26.77236577673101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1765440407364!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<img src="assets/mani/pro.png" alt="" class="pro-img">
 </div>
         </div>
     </section>
 
     <section class="py-5 bg-light " id="services">
                 <div class="container">
-                    <h2 class="text-center mb-5 fw-bold">We also work in</h2>
+                                   <div class="section-heading">We are also work in</div>
 
                     <!-- 01. Residential & Commercial Sales & Marketing -->
                     <div class="overview-grid mb-5">
@@ -1158,7 +1215,7 @@
         <div class="container">
             <div class="text-center">
                 <h3>Mani Land & Housing</h3>
-                With over 18 years of experience, Mani Land & Housing has established itself as a trusted name in real estate. Renowned for crafting homes that seamlessly blend luxury with comfort, the company remains committed to delivering exceptional quality and lasting value in every project. Mani Land & Housing is poised to become one of Lucknow’s most prestigious addresses, thoughtfully designed to meet the needs of today’s modern and dynamic lifestyle.
+                Since 2004, Mani Land & Housing has established itself as a trusted name in real estate. Renowned for crafting homes that seamlessly blend luxury with comfort, the company remains committed to delivering exceptional quality and lasting value in every project. Mani Land & Housing is poised to become one of Lucknow’s most prestigious addresses, thoughtfully designed to meet the needs of today’s modern and dynamic lifestyle.
             </div>
             <br>
             <br>
